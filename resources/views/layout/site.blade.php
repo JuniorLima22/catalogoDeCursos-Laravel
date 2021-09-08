@@ -1,3 +1,3 @@
-@include('layout._include.topo')
+@include('layout._includes.topo')
 @yield('conteudo')
-@include('layout._include.footer')
+@include('layout._includes.footer')
