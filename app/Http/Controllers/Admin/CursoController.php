@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Admin;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use \App\Curso;
+use Session;
 
 class CursoController extends Controller
 {
@@ -40,7 +41,7 @@ class CursoController extends Controller
         }
 
         Curso::create($dados);
-
+        Session::flash('mensagem', 'Curso adicionado com sucesso!');
         return redirect()->route('admin.cursos');
     }
     
@@ -71,12 +72,14 @@ class CursoController extends Controller
         }
 
         Curso::find($id)->update($dados);
+        Session::flash('mensagem', 'Curso atualizado com sucesso!');
         return redirect()->route('admin.cursos');
     }
     
     public function deletar($id)
     {
         Curso::find($id)->delete();
+        Session::flash('mensagem', 'Curso excluido com sucesso!');
         return redirect()->route('admin.cursos');
     }
 }

@@ -6,6 +6,17 @@ $(document).ready(function(){
     Materialize.updateTextFields();
     $(".button-collapse").sideNav();
     $('.materialboxed').materialbox();
+
+    @if (Session::has('mensagem'))
+        @php
+            $msg = Session::get('mensagem');
+            echo "flashMessage('{$msg}')";
+        @endphp
+    @endif
+
+    function flashMessage(mensagem){
+        Materialize.toast(mensagem, 5000);
+    }
 });
 </script>
 </body>
