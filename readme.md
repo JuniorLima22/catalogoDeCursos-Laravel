@@ -44,10 +44,10 @@ Antes de começar, você vai precisar ter instalado em sua máquina as seguintes
 
 ```bash
 # Clone este repositório
-$ git clone <linkRepositorio>
+$ git clone https://github.com/JuniorLima22/catalogoDeCursos-Laravel.git
 
 # Acesse a pasta do projeto no terminal/cmd
-$ cd nomeDoProjeto
+$ cd catalogoDeCursos
 
 # Instale as dependências
 $ composer install
