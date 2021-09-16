@@ -52,21 +52,21 @@ $ cd catalogoDeCursos
 # Instale as dependências
 $ composer install
 
-# Gerar nova chave
-$ php artisan key:generate
-
 # criar arquivo .env (pode copiar de .env.example)
 
 # Configure suas variáveis ​​de banco de dados em .env
 
 # Criar um novo esquema no Banco de Dados MySql
 
+# Gerar nova chave
+$ php artisan key:generate
+
 # Executar migrations
 $ php artisan migrate
 
 # Criar usuário master 
-# com usuário admin@email.com e senha 123456
-$ php artisan make:seeder UsuarioSeeder
+# usuário: admin@email.com e senha: 123456
+$ php artisan db:seed --class=UsuarioSeeder
 
 # Execute a aplicação
 $ php artisan serve
